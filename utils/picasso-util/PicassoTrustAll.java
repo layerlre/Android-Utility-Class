@@ -22,6 +22,7 @@ public class PicassoTrustAll {
 
     private PicassoTrustAll(Context context) {
         OkHttpClient client = new OkHttpClient();
+        client.setProtocols(Arrays.asList(Protocol.HTTP_1_1));
         client.setHostnameVerifier(new HostnameVerifier() {
             @Override
             public boolean verify(String s, SSLSession sslSession) {
