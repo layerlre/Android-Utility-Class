@@ -20,7 +20,6 @@ public abstract class AddViewAdapter {
     protected abstract int getCount();
 
     public void renderView(){
-        this.linearLayout = linearLayout;
         if (linearLayout.getChildCount()>0)
             linearLayout.removeAllViews();
         for (int position = 0; position < getCount(); position++) {
