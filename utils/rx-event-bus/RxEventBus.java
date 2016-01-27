@@ -6,7 +6,7 @@ import rx.subjects.SerializedSubject;
 import rx.subjects.Subject;
 
 /**
- * Created by layer on 19/1/2559.
+ * Created by nuuneoi on 1/19/2016.
  */
 public class RxEventBus {
     private final Subject<Object, Object> bus = new SerializedSubject<>(PublishSubject.create());
