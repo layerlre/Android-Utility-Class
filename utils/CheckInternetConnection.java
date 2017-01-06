@@ -6,9 +6,9 @@ import android.net.NetworkInfo;
 
 public class CheckInternetConnection {
 	
-	CheckInternetConnection instance;
+	private static CheckInternetConnection instance;
 
-	public CheckInternetConnection getInstance(){
+	public static CheckInternetConnection getInstance(){
 		if (instance==null)
 			instance =  new CheckInternetConnection();
 		return instance;
