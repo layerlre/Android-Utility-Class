@@ -6,10 +6,14 @@ import android.net.NetworkInfo;
 
 public class CheckInternetConnection {
 	
+	CheckInternetConnection instance;
+
 	public CheckInternetConnection getInstance(){
-		return new CheckInternetConnection();
+		if (instance==null)
+			instance =  new CheckInternetConnection();
+		return instance;
 	}
-	public static boolean isNetworkAvailable(Context context) {
+	public boolean isNetworkAvailable(Context context) {
 		ConnectivityManager conMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo i = conMgr.getActiveNetworkInfo();
 		if (i == null) return false;
